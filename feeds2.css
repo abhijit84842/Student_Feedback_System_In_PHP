@@ -1,0 +1,28 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+	background-image: url(images/feedback5.jpg);
+	height: 100vh;
+	background-size: cover;
+    background-position: center;
+    background-color: #000;
+}
+
+
+#content
+{
+
+	width:500px;
+	height:auto;
+	background-color:transparent;
+	border:5px solid rgba(107,107,107,1.00);
+	border-radius:2px;
+	margin-left:auto;
+	margin-right:auto;
+}

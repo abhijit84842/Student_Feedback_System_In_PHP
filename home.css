@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background-image: url(images/feedback8.jpg);
+    height: 100vh;
+	background-size: cover;
+    background-position: center;
+    background-color: #d4cece;
+}
+
+.SubHead{
+    color: rgb(51, 19, 233);
+    font-size: 200%;
+}
+h1{
+    color: rgb(51, 224, 45);
+    font-weight: 200;
+}
+
+.h1{
+    height: 500%;
+    color: rgb(202, 24, 39);
+    font-size: 250%;
+
+}
+
+
+
+.h2{
+   
+    color: rgb(0, 0, 0);
+    font-size: 170%;
+
+}
+
+.h3{
+   
+    color: rgb(0, 0, 0);
+    font-size: 130%;
+
+}
+
+.h4{
+   
+    color: rgb(0, 0, 0);
+    font-size: 100%;
+
+}
+
+.m1head{
+    position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
