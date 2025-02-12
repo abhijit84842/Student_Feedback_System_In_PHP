@@ -7,11 +7,11 @@ $sql=mysqli_query($al,"select * from feeds where roll='".mysqli_real_escape_stri
 if(mysqli_num_rows($sql)>0)
 {
 	?>
-    <script type="text/javascript">
-	alert('Feedback already submitted');
-	window.location='feedback_step_3.php';
-	</script>
-    <?php
+<script type="text/javascript">
+alert('Feedback already submitted');
+window.location = 'feedback_step_3.php';
+</script>
+<?php
 }
 
 if(isset($_POST['roll']))
@@ -34,96 +34,99 @@ $parameters = array("Poor","Fair","Good","Very Good","Excellent");
 ?>
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Student Feedback System</title>
-<link href="feedbackstep4.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <title>Student Feedback System</title>
+    <link href="feedbackstep4.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<center>
-<h1> Student Feedback Step IV </h1>
 
-</center>
+    <h1> Student Feedback Step IV </h1>
 
 
-<div id="content" align="center">
-<br>
-<br>
+    <div id="content" align="center">
+        <br>
+        <br>
 
 
-<div class="main">
-<div class="wrapper">
+        <div class="main">
+            <div class="wrapper">
 
-<form method="post" action="feedback_step_5.php" >
-<div id="table"> 
-    <div class="tr">
-		<div class="td">
-        	<label>Roll No : </label>
-        </div>
-        <div class="td">
-			<input type="text" disabled size="5" value="<?php echo $_SESSION['roll'];?>" />
-            <input type="hidden" value="<?php echo $_SESSION['roll'];?>" name="roll" />
-        </div>
-    </div>
-     <div class="tr">
-     <div class="td">
-        	<label>Faculty : </label>
-        </div>
-        
+                <form method="post" action="feedback_step_5.php">
+                    <div id="table">
+                        <div class="tr">
+                            <div class="td">
+                                <label>Roll No : </label>
+                            </div>
+                            <div class="td">
+                                <input type="text" disabled size="5" value="<?php echo $_SESSION['roll'];?>" />
+                                <input type="hidden" value="<?php echo $_SESSION['roll'];?>" name="roll" />
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td">
+                                <label>Faculty : </label>
+                            </div>
 
-     <div class="td">
-			<input type="text" disabled size="25" value="<?php echo $_SESSION['name'];?>" />
-            <input type="hidden" value="<?php echo $_SESSION['faculty_id'];?>" name="faculty_id" />
-            
-        </div>
-      </div>
-      
-      
-      <div class="tr">
-     <div class="td">
-        	<label>Subject : </label>
-        </div>
-        
 
-     <div class="td">
-			<input type="text" disabled size="25" value="<?php echo $_SESSION['subject'];?>"/>
-            <input type="hidden" value="<?php echo $_SESSION['subject'];?>" name="subject" />
-        </div>
-      </div>
-      
-</div>
-<hr style="width:100%;">
+                            <div class="td">
+                                <input type="text" disabled size="25" value="<?php echo $_SESSION['name'];?>" />
+                                <input type="hidden" value="<?php echo $_SESSION['faculty_id'];?>" name="faculty_id" />
 
-	<?php
+                            </div>
+                        </div>
+
+
+                        <div class="tr">
+                            <div class="td">
+                                <label>Subject : </label>
+                            </div>
+
+
+                            <div class="td">
+                                <input type="text" disabled size="25" value="<?php echo $_SESSION['subject'];?>" />
+                                <input type="hidden" value="<?php echo $_SESSION['subject'];?>" name="subject" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr style="width:100%;">
+
+                    <?php
 		for($i=1;$i<=10;$i++)
 		{
 			?>
-            <div class="tddd">
-				<span class="text"><?php echo $i;?>. <?php echo  $q['q'.$i];?> : <br>
-                <?php 
+                    <div class="tddd">
+                        <span class="text"><?php echo $i;?>. <?php echo  $q['q'.$i];?> : <br>
+                            <?php 
 						for($j=1;$j<=5;$j++)
 						{
 							?>
-                        <input type="radio" required value="<?php echo $j;?>" name="q<?php echo $i;?>" /><?php echo $parameters[$j-1];?>&nbsp;&nbsp;
-                        <?php } ?> </span>
-                        				</div>
-                                        	<hr style="width:100%;"> <?php } ?>
-                                         <div class="tddd">
-                                         <textarea name="comment" cols="40" required placeholder="Enter Comments"></textarea>
-                                         </div>
-        	<input type="button" onClick="window.location='feedback_step_3.php'" value="BACK">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="SUBMIT" onClick="return confirm('Are you sure?')" />
-            <br>
-<br>
+                            <input type="radio" required value="<?php echo $j;?>"
+                                name="q<?php echo $i;?>" /><?php echo $parameters[$j-1];?>&nbsp;&nbsp;
+                            <?php } ?> </span>
+                    </div>
+                    <hr style="width:100%;"> <?php } ?>
+                    <div class="tddd">
+                        <textarea name="comment" cols="40" required placeholder="Enter Comments"></textarea>
+                    </div>
+                    <input class="back" type="button" onClick="window.location='feedback_step_3.php'"
+                        value="BACK">&nbsp;&nbsp;&nbsp;&nbsp;<input class="next" type="submit" value="SUBMIT"
+                        onClick="return confirm('Are you sure?')" />
+                    <br>
+                    <br>
 
+            </div>
+
+            <br>
         </div>
-   
-    <br>
-</div>
-</form>
-<br>
-</div>
-</div>
+        </form>
+        <br>
+    </div>
+    </div>
 
 </body>
+
 </html>

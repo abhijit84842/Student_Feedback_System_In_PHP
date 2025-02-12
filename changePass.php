@@ -22,85 +22,62 @@ if(!empty($_POST))
 	if($u==true)
 	{
 		?>
-        <script type="application/javascript">
-		alert('Successfully changed password');
-		</script>
-        <?php } else { ?> <script type="application/javascript">
-		alert('Incorrect old password');
-		</script><?php }
+<script type="application/javascript">
+alert('Successfully changed password');
+</script>
+<?php } else { ?> <script type="application/javascript">
+alert('Incorrect old password');
+</script><?php }
 }
 		
 ?>
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Change Password</title>
-<link href="changepassword.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <title>Change Password</title>
+    <link href="changepassword.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+    <h1> Change Your Password </h1>
+    <div class="main">
+        <div class="wrapper">
 
+            <div id="content" align="center">
 
-<center>
-<h1> Change Your Password </h1>
-</center>
+                <form class="form" method="post" action="">
+                    <div id="table">
+                        <div class="tr">
+                            <div class="td1">
+                                <label>Old Password : </label>
+                            </div>
+                            <div class="td">
+                                <input type="password" name="p1" size="25" required placeholder="Enter Old Password" />
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td1">
+                                <label>New Password : </label>
+                            </div>
 
-<div class="main">
-<div class="wrapper">
+                            <div class="td">
+                                <input type="password" name="p2" size="25" required placeholder="Enter New Password" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tdd">
+                        <input type="submit" value="CHANGE PASSWORD" />
+                    </div>
 
-<div id="content" align="center">
-<br>
-<br>
-<span class="SubHead">Change Password</span>
-<br>
-<br>
-<form method="post" action="" >
-<div id="table">
-	<div class="tr">
-		<div class="td">
-        	<label>Old Password : </label>
-        </div>
-        <div class="td">
-			<input type="password" name="p1" size="25" required placeholder="Enter Old Password" />
+                    <input class="back" type="button" onClick="window.location='home.php'" value="BACK">
+            </div>
+            </form>
+
         </div>
     </div>
-    <div class="tr">
-		<div class="td">
-        	<label>New Password : </label>
-        </div>
-        
-        <div class="td">
-			<input type="password" name="p2" size="25" required placeholder="Enter New Password" />
-        </div>
     </div>
-</div>
-		
-        <div class="tdd">
-        	<input type="submit" value="CHANGE PASSWORD" />
-        </div>
-    
-<br>
-<br>
-
-     <br>
-
-<input type="button" onClick="window.location='home.php'" value="BACK">
-<br>
-<br>
-</div>
-</form>
-
-
-<br>
-<br>
-<br>
-
-<br>
-<br>
-
-</div>
-</div>
-</div>
 </body>
+
 </html>

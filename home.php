@@ -18,17 +18,14 @@ $name=$y['name'];
  <!-- Required meta tags -->
  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="home.css">
 
-    <title>Admin Section</title>
-    <center>
-        <h1>Welcome to Admin Section</h1>
-    </center>
 
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+  
+    <title>Admin Section</title>
 
 </head>
 
@@ -47,6 +44,32 @@ $name=$y['name'];
         crossorigin="anonymous"></script>
 
 
+
+<div>
+    <h1 class="adminh1">Admin Panel</h1>
+    <h2>Admin Name is :- <span class="admin-name"><?php echo $name; ?></span></h2>
+    <div class="logout-box">
+        <a href="logout.php">Logout</a>
+    </div>
+
+    <div class="card-box">
+            <div class="card">
+                <a href="manageFaculty.php">Manage Faculty</a>
+            </div>
+            <div class="card">
+                <a href="showfaculty.php">Show Faculty</a>
+            </div>
+            <div class="card">
+                <a href="feeds.php">Check Feedback</a>
+            </div>
+            <div class="card">
+                <a href="changePass.php">Change Password</a>
+            </div>
+    </div>
+
+</div>
+
+<!---
 <div id="content" align="center">
 <br>
 <br>
@@ -54,11 +77,12 @@ $name=$y['name'];
 <br>
 <br>
 
-
+--->
 
 
 
 <!--Nav bar Create-->
+<!---
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Feedback System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -109,6 +133,6 @@ $name=$y['name'];
     <h4 class="h4" align="center">Capture the feedback of students to measure their satisfaction and experience with your services, staff,</h4>
     <h5 class="h5" align="center">  study material, and peers. </h5>
 </div>
-
+-->
 </body>
 </html>

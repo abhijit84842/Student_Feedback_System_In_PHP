@@ -24,8 +24,8 @@ body{
 
 .wrapper{
     position: relative;
-    width: 500px;
-    height: 400px;
+    width: 30rem;
+    height: 30rem;
     background: transparent;
     border: 2px solid rgba(255,255,255, .5);
     border-radius: 20px;
@@ -39,6 +39,51 @@ body{
 }
 
 h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 5rem;
+    font-weight: 600;
     color: rgb(231, 45, 70);
 }
 
+.td{
+    font-size: 1.5rem;
+    color: red;
+}
+
+.td select{
+    width: 20rem;
+    padding: 5px;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.tdd{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.back{
+    padding: 5px;
+    background-color: rgb(245, 50, 50);
+    border: none;
+    width: 5rem;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.next{
+    padding: 5px;
+    background-color: rgb(53, 248, 13);
+    border: none;
+    width: 5rem;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+}
